@@ -1,0 +1,60 @@
+.barra{
+  background: green;
+}
+.btn-verde{
+  background: green;
+  color: white;
+}
+
+.btn-red{
+  background: red;
+  color: white;
+}
+
+
+.form-control-dark {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: var(--bs-gray);
+}
+.form-control-dark:focus {
+  color: #fff;
+  background-color: var(--bs-dark);
+  border-color: #fff;
+  box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .25);
+}
+
+.bi {
+  vertical-align: -.125em;
+  fill: currentColor;
+}
+
+.text-small {
+  font-size: 85%;
+}
+
+.dropdown-toggle {
+  outline: 0;
+}
+
+.pagy-bootstrap-nav{
+  color: red;
+}
+
+.page-link {
+  align-items: center;
+  border: 0;
+  border-radius: 3;
+  color: black;
+  display: inline-flex;
+  height: 32px;
+  justify-content: center;
+  margin: 0 5px;
+  min-width: 32px;
+  padding: 0 10px;
+}
+
+.page-item.active .page-link {
+  background: green;
+}
+

@@ -1,0 +1,6 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Client") do |sheet|
+  @clients.each do |client|
+    sheet.add_row [client.rut, client.name]
+  end
+end

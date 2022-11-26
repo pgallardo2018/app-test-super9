@@ -1,0 +1,24 @@
+<div class="container">
+  <h1>Lista Proveedores</h1>
+
+  <%= link_to 'Download Excel', clients_full_path(format: :xlsx), class: "btn btn-verde" %>
+  <%= link_to 'Download PDF', clients_full_path(format: :xlsx),class: "btn btn-primary" %>
+  <%#= render xlsx: 'clients' %>
+
+  <div class="mt-2 p-3 ">
+    <%== pagy_bootstrap_nav(@pagy,pagy_id:'paginacion') %>
+  </div>
+
+  <table class="table">
+    <tr>
+      <th>Rut</th>
+      <th>Nombre</th>
+    </tr>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.rut %></td>
+        <td><%= client.name %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
