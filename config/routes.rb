@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'pages/home'
   get 'download', to: 'clients#download'
   get 'preview', to: 'clients#preview'
   get 'clients/pdf/:id', to: 'clients#pdf', as: 'client_pdf'
@@ -8,4 +9,5 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root to: 'pages#home'
 end
