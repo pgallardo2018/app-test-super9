@@ -79,3 +79,6 @@ gem 'pagy', '~> 5.10', '>= 5.10.1'
 
 gem 'caxlsx'
 gem 'caxlsx_rails'
+
+gem 'prawn', '~> 2.4'
+gem 'simple_form', '~> 5.1'

@@ -2,7 +2,8 @@
   <h1>Lista Proveedores dev</h1>
 
   <%= link_to 'Download Excel', clients_full_path(format: :xlsx), class: "btn btn-verde" %>
-  <%= link_to 'Download PDF', clients_full_path(format: :xlsx),class: "btn btn-primary" %>
+  <%= link_to 'Download PDF', download_path,class: "btn btn-primary" %>
+  <%= link_to 'Preview', preview_path,class: "btn btn-secondary" %>
   <%#= render xlsx: 'clients' %>
 
   <div class="mt-2 p-3 ">
@@ -13,11 +14,21 @@
     <tr>
       <th>Rut</th>
       <th>Nombre</th>
+      <th>Adress</th>
+      <th>Phone</th>
+      <th>City</th>
+      <th colspan="2"></th>
     </tr>
     <% @clients.each do |client| %>
       <tr>
         <td><%= client.rut %></td>
         <td><%= client.name %></td>
+        <td><%= client.adress %></td>
+        <td><%= client.phone %></td>
+        <td><%= client.city %></td>
+        <td><%= link_to 'Show', client , class: 'btn btn-outline-info btn-sm'%></td>
+        <td><%= link_to 'PDF', client_pdf_path(client) ,class: "btn btn-outline-warning btn-sm"  %> </td>
+
       </tr>
     <% end %>
   </table>
